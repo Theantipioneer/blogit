@@ -1,0 +1,14 @@
+{% extends "blogapp/base.html" %}
+{% block content %}
+<h1>New Comment </h1>
+<form action="#" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button type="submit" class="save btn btn-default">Post Comment</button>
+</form>
+
+<!-- if we want the comment form to have the same capabilities as the medium editor we have to ass this script. -->
+
+<script>var editor = new MediumEditor('.editable');</script>
+{% endblock content %}
